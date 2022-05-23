@@ -7,7 +7,7 @@ const threeDaysFromNow = DateTime.now().plus({ days: 3 });
 const nft = {
   name: "Equilibrium #3429",
   description: "Our Equilibrium collection promotes balance and calm.",
-  src: require("../../assets/image-equilibrium.jpg"),
+  src: "/assets/image-equilibrium.jpg",
   alt:
     "translucent cube with red light filtering through on a blue background standing on one corner",
   price: 0.041,
@@ -15,7 +15,7 @@ const nft = {
   auctionEnd: threeDaysFromNow,
   creator: {
     name: "Jules Wyvern",
-    src: require("../../assets/image-avatar.png")
+    src: "/assets/image-avatar.png"
   }
 };
 

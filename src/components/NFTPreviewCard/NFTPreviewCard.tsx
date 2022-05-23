@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { DateTime, Interval } from "luxon";
-import { ReactComponent as Clock } from "../../assets/icon-clock.svg";
-import { ReactComponent as Ethereum } from "../../assets/icon-ethereum.svg";
-import { ReactComponent as View } from "../../assets/icon-view.svg";
+import { DateTime } from "luxon";
+import { ReactComponent as Clock } from "../../../public/assets/icon-clock.svg";
+import { ReactComponent as Ethereum } from "../../../public/assets/icon-ethereum.svg";
+import { ReactComponent as View } from "../../../public/assets/icon-view.svg";
 
 interface Creator {
   src: string;
@@ -30,14 +30,7 @@ const NFTPreviewCard = ({
   auctionEnd,
   creator
 }: Props) => {
-  const now = DateTime.now();
-  const later = DateTime.now().plus({ days: 3 });
-  const interval = Interval.fromDateTimes(now, later);
-  console.log({
-    now,
-    later,
-    interval
-  });
+  console.log({ src });
   return (
     <Wrapper>
       <ImageContainer>
@@ -100,7 +93,7 @@ const Overlay = styled.div`
   opacity: 0;
   &:hover {
     opacity: 1;
-    background: hsla(178, 100%, 50%, 0.4);
+    background: hsla(178, 100%, 50%, 0.6);
   }
 `;
 const Title = styled.h3`
