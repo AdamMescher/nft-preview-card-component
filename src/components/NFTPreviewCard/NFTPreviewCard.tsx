@@ -3,8 +3,6 @@ import { DateTime, Interval } from "luxon";
 import { ReactComponent as Clock } from "../../assets/icon-clock.svg";
 import { ReactComponent as Ethereum } from "../../assets/icon-ethereum.svg";
 import { ReactComponent as View } from "../../assets/icon-view.svg";
-import timeRemainingToString from "../../utils/timeRemainingToString";
-import ms from "../../utils/ms";
 
 interface Creator {
   src: string;
