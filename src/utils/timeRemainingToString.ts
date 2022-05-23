@@ -14,13 +14,14 @@ const timeRemainingToString = ({
   hour,
   minute,
   second
-}: TimeRemaining): string => {
+}: TimeRemaining): string | null => {
   if (year) return `${year} year${year > 1 ? "s" : null} left`;
   if (month) return `${month} month${month > 1 ? "s" : null} left`;
   if (hour) return `${hour} hour${hour > 1 ? "s" : null} left`;
   if (day) return `${day} day${day > 1 ? "s" : null} left`;
   if (minute) return `${minute} minute${minute > 1 ? "s" : null} left`;
   if (second) return `${second} second${second > 1 ? "s" : null} left`;
+  return null;
 };
 
 export default timeRemainingToString;
