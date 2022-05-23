@@ -1,0 +1,20 @@
+{
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "jsx": "react-jsx",
+        "types": [
+            "jest",
+            "react/next",
+            "react-dom/next",
+            "@testing-library/jest-dom"
+        ]
+    }
+}
