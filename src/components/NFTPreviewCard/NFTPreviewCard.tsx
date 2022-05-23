@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import { DateTime } from "luxon";
-import { ReactComponent as Clock } from "../../../public/assets/icon-clock.svg";
-import { ReactComponent as Ethereum } from "../../../public/assets/icon-ethereum.svg";
-import { ReactComponent as View } from "../../../public/assets/icon-view.svg";
 
 interface Creator {
   src: string;
@@ -35,7 +32,7 @@ const NFTPreviewCard = ({
     <Wrapper>
       <ImageContainer>
         <Overlay>
-          <View />
+          <img src="/assets/icon-view.svg" alt="" />
         </Overlay>
         <img src={src} alt={alt} />
       </ImageContainer>
@@ -43,13 +40,13 @@ const NFTPreviewCard = ({
       <Description>{description}</Description>
       <Auction>
         <Price>
-          <Ethereum />
+          <img src="/assets/icon-ethereum.svg" alt="" />
           <Cost>
             {price} {currency}
           </Cost>
         </Price>
         <AuctionEnd>
-          <Clock />
+          <img src="/assets/icon-clock.svg" alt="" />
           <span>3 days left</span>
         </AuctionEnd>
       </Auction>
