@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import { DateTime } from "luxon";
+import { ReactComponent as Clock } from "./assets/icon-clock.svg";
+import { ReactComponent as Ethereum } from "./assets/icon-ethereum.svg";
+import { ReactComponent as View } from "./assets/icon-view.svg";
 
 interface Creator {
-  src: string;
   name: string;
+  src: string;
 }
 
 interface Props {
   name: string;
   description: string;
-  src: string;
+  src: any;
   alt: string;
   price: number;
   currency: string;
@@ -27,12 +30,11 @@ const NFTPreviewCard = ({
   auctionEnd,
   creator
 }: Props) => {
-  console.log({ src });
   return (
     <Wrapper>
       <ImageContainer>
         <Overlay>
-          <img src="/assets/icon-view.svg" alt="" />
+          <View />
         </Overlay>
         <img src={src} alt={alt} />
       </ImageContainer>
@@ -40,13 +42,13 @@ const NFTPreviewCard = ({
       <Description>{description}</Description>
       <Auction>
         <Price>
-          <img src="/assets/icon-ethereum.svg" alt="" />
+          <Ethereum />
           <Cost>
             {price} {currency}
           </Cost>
         </Price>
         <AuctionEnd>
-          <img src="/assets/icon-clock.svg" alt="" />
+          <Clock />
           <span>3 days left</span>
         </AuctionEnd>
       </Auction>
